@@ -11,6 +11,8 @@ namespace spotilike
         private string title;
         private string details;
         private DateTime date;
+        private Artiste artiste;
+        private Style style;
         
 
         // CONSTRUCT
@@ -26,6 +28,15 @@ namespace spotilike
             this.title = title;
             this.details = details;
             this.date = date;
+        }
+
+        public Musique(string title, string details, DateTime date, Artiste artiste, Style style)
+        {
+            this.title = title;
+            this.details = details;
+            this.date = date;
+            this.artiste = artiste;
+            this.style = style;
         }
 
 
@@ -59,6 +70,32 @@ namespace spotilike
         public void setDate(DateTime date)
         {
             this.date = date;
+        }
+
+        public Artiste getArtiste()
+        {
+            return this.artiste;
+        }
+
+        public void setArtiste(Artiste artistre)
+        {
+            this.artiste = artiste;
+        }
+
+        public Style getStyle()
+        {
+            return this.style;
+        }
+
+        public void setStyle(Style style)
+        {
+            this.style = style;
+        }
+
+        public string __toString()
+        {
+            // TODO
+            return "TODO";
         }
 
     }

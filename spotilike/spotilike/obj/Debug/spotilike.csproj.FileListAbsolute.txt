@@ -1,0 +1,2 @@
+D:\VisualStudio\cc\project\spotilike\spotilike\obj\Debug\spotilike.csprojResolveAssemblyReference.cache
+D:\VisualStudio\cc\project\spotilike\spotilike\obj\Debug\spotilike.csproj.CoreCompileInputs.cache
