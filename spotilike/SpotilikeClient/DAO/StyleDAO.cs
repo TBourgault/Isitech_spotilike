@@ -11,11 +11,12 @@ namespace SpotilikeClient.DAO
 {
     class StyleDAO : IDAO<Style>
     {
+        // TODO: Modifier la variable Data Source dans la connectionString
         private string connectionString = @"Data Source=PATH_TO_DB_FILE\...\file.ABC; Version=3; FailIfMissing=True; Foreign Keys=True;";
 
         public Style create(Style o)
         {
-            throw new NotImplementedException(); // COMMENT, TEST & REMOVE.
+            throw new NotImplementedException(); // TODO: COMMENT, TEST & REMOVE.
 
             int success = -1;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
