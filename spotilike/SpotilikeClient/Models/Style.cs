@@ -8,6 +8,7 @@ namespace SpotilikeClient.Models
 {
     class Style
     {
+        private int id;
         private string name;
         private int position;
         private bool isActive;
@@ -35,6 +36,16 @@ namespace SpotilikeClient.Models
         }
 
         // GETTERS & SETTERS
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
         public string getName()
         {
             return this.name;
