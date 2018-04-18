@@ -97,7 +97,7 @@ namespace SpotilikeClient.DAO
                                 s.setId(int.Parse(reader["id"].ToString()));
                                 s.setName(reader["name"].ToString());
                                 s.setPosition(int.Parse(reader["position"].ToString()));
-                                s.setIsActive(int.Parse(reader["isActive"].ToString()));
+                                s.setIsActive(bool.Parse(reader["isActive"].ToString()));
                             }
                         }
                         cmd.CommandText = "INSERT INTO Style(name, position, isActive) VALUES (@Name, @Position, @IsActive)";

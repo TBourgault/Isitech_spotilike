@@ -43,7 +43,8 @@
             this.musiqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.artisteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.list_panel = new System.Windows.Forms.Panel();
+            this.play_panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             this.artisteToolStripMenuItem,
             this.styleToolStripMenuItem});
             this.trierParToolStripMenuItem.Name = "trierParToolStripMenuItem";
-            this.trierParToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.trierParToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.trierParToolStripMenuItem.Text = "Trier par ...";
             // 
             // musiqueToolStripMenuItem
@@ -105,7 +106,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // configurationToolStripMenuItem
@@ -120,7 +121,7 @@
             // couleursToolStripMenuItem
             // 
             this.couleursToolStripMenuItem.Name = "couleursToolStripMenuItem";
-            this.couleursToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.couleursToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.couleursToolStripMenuItem.Text = "Couleurs";
             // 
             // ajouterToolStripMenuItem
@@ -130,7 +131,7 @@
             this.artisteToolStripMenuItem1,
             this.genreToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.ajouterToolStripMenuItem.Text = "Ajouter ...";
             // 
             // musiqueToolStripMenuItem1
@@ -151,19 +152,27 @@
             this.genreToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.genreToolStripMenuItem.Text = "Genre";
             // 
-            // panel1
+            // list_panel
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(942, 398);
-            this.panel1.TabIndex = 2;
+            this.list_panel.Location = new System.Drawing.Point(12, 31);
+            this.list_panel.Name = "list_panel";
+            this.list_panel.Size = new System.Drawing.Size(715, 429);
+            this.list_panel.TabIndex = 2;
+            // 
+            // play_panel
+            // 
+            this.play_panel.Location = new System.Drawing.Point(733, 31);
+            this.play_panel.Name = "play_panel";
+            this.play_panel.Size = new System.Drawing.Size(237, 429);
+            this.play_panel.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 570);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.play_panel);
+            this.Controls.Add(this.list_panel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -192,6 +201,17 @@
         private System.Windows.Forms.ToolStripMenuItem artisteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem genreToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn album;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artiste;
+        private System.Windows.Forms.DataGridViewTextBoxColumn style;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duration;
+        private System.Windows.Forms.DataGridViewButtonColumn action;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel list_panel;
+        private System.Windows.Forms.Panel play_panel;
     }
 }
 
