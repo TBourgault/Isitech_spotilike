@@ -18,3 +18,8 @@ D:\VisualStudio\cc\project\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.c
 D:\VisualStudio\cc\project\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.csproj.CopyComplete
 D:\VisualStudio\cc\project\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.exe
 D:\VisualStudio\cc\project\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.pdb
+C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.csprojResolveAssemblyReference.cache
+C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.Form1.resources
+C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.Properties.Resources.resources
+C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.csproj.GenerateResource.cache
+C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\obj\Debug\SpotilikeClient.csproj.CoreCompileInputs.cache

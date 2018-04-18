@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,14 +46,21 @@
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.list_panel = new System.Windows.Forms.Panel();
             this.play_panel = new System.Windows.Forms.Panel();
+            this.BTNPause = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.BTNNext = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.BTNStop = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.list_panel.SuspendLayout();
+            this.play_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(67, 4);
             // 
             // menuStrip1
             // 
@@ -154,6 +162,8 @@
             // 
             // list_panel
             // 
+            this.list_panel.Controls.Add(this.button4);
+            this.list_panel.Controls.Add(this.button2);
             this.list_panel.Location = new System.Drawing.Point(12, 31);
             this.list_panel.Name = "list_panel";
             this.list_panel.Size = new System.Drawing.Size(715, 429);
@@ -161,10 +171,59 @@
             // 
             // play_panel
             // 
+            this.play_panel.Controls.Add(this.BTNStop);
+            this.play_panel.Controls.Add(this.BTNNext);
+            this.play_panel.Controls.Add(this.BTNPause);
             this.play_panel.Location = new System.Drawing.Point(733, 31);
             this.play_panel.Name = "play_panel";
             this.play_panel.Size = new System.Drawing.Size(237, 429);
             this.play_panel.TabIndex = 3;
+            // 
+            // BTNPause
+            // 
+            this.BTNPause.Image = ((System.Drawing.Image)(resources.GetObject("BTNPause.Image")));
+            this.BTNPause.Location = new System.Drawing.Point(88, 369);
+            this.BTNPause.Name = "BTNPause";
+            this.BTNPause.Size = new System.Drawing.Size(54, 55);
+            this.BTNPause.TabIndex = 0;
+            this.BTNPause.UseVisualStyleBackColor = true;
+            this.BTNPause.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(561, 176);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // BTNNext
+            // 
+            this.BTNNext.Image = ((System.Drawing.Image)(resources.GetObject("BTNNext.Image")));
+            this.BTNNext.Location = new System.Drawing.Point(148, 369);
+            this.BTNNext.Name = "BTNNext";
+            this.BTNNext.Size = new System.Drawing.Size(57, 56);
+            this.BTNNext.TabIndex = 2;
+            this.BTNNext.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(584, 297);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // BTNStop
+            // 
+            this.BTNStop.Image = ((System.Drawing.Image)(resources.GetObject("BTNStop.Image")));
+            this.BTNStop.Location = new System.Drawing.Point(148, 310);
+            this.BTNStop.Name = "BTNStop";
+            this.BTNStop.Size = new System.Drawing.Size(57, 53);
+            this.BTNStop.TabIndex = 4;
+            this.BTNStop.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -177,8 +236,11 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Spotilike";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.list_panel.ResumeLayout(false);
+            this.play_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +274,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel list_panel;
         private System.Windows.Forms.Panel play_panel;
+        private System.Windows.Forms.Button BTNPause;
+        private System.Windows.Forms.Button BTNStop;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BTNNext;
+        private System.Windows.Forms.Button button2;
     }
 }
 
