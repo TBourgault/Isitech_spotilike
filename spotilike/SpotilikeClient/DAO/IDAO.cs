@@ -12,7 +12,7 @@ namespace SpotilikeClient.DAO
 
         List<T> findAll();
 
-        T delete(int id);
+        void delete(int id);
 
         T update(int id, T o);
 

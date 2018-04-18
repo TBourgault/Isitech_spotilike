@@ -16,7 +16,7 @@ namespace SpotilikeClient.DAO
 
         public Style create(Style o)
         {
-            throw new NotImplementedException(); // TODO: COMMENT, TEST & REMOVE.
+            //throw new NotImplementedException();
 
             int success = -1;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
@@ -51,24 +51,155 @@ namespace SpotilikeClient.DAO
             }
         }
 
-        public Style delete(int id)
+        public void delete(int id)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(conn))
+                {
+                    cmd.CommandText = "";
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@Truc", "truc");
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException e)
+                    {
+                        System.Console.WriteLine(e);
+                    }
+                }
+                conn.Close();
+            }
         }
 
         public List<Style> findAll()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            List<Style> styles = new List<Style>();
+            int success = -1;
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM style";
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Style s = new Style();
+                                s.setId(int.Parse(reader["id"].ToString()));
+                                s.setName(reader["name"].ToString());
+                                s.setPosition(int.Parse(reader["position"].ToString()));
+                                s.setIsActive(bool.Parse(reader["isActive"].ToString()));
+                            }
+                        }
+                        cmd.CommandText = "INSERT INTO Style(name, position, isActive) VALUES (@Name, @Position, @IsActive)";
+                        cmd.Prepare();
+                        cmd.Parameters.AddWithValue("@Name", o.getName());
+                        cmd.Parameters.AddWithValue("@Position", o.getPosition());
+                        cmd.Parameters.AddWithValue("@IsActive", o.getIsActive());
+                        try
+                        {
+                            success = cmd.ExecuteNonQuery();
+                        }
+                        catch (SQLiteException e)
+                        {
+                            System.Console.WriteLine(e);
+
+                        }
+                    }
+                    conn.Close();
+                }
+                if (success != -1)
+                {
+                    return styles;
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
         public Style findById(int id)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            int success = -1;
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(conn))
+                {
+                    cmd.CommandText = "INSERT INTO Style(name, position, isActive) VALUES (@Name, @Position, @IsActive)";
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@Name", o.getName());
+                    cmd.Parameters.AddWithValue("@Position", o.getPosition());
+                    cmd.Parameters.AddWithValue("@IsActive", o.getIsActive());
+                    try
+                    {
+                        success = cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException e)
+                    {
+                        System.Console.WriteLine(e);
+
+                    }
+                }
+                conn.Close();
+            }
+            if (success != -1)
+            {
+                return o;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Style update(int id, Style o)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            int success = -1;
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(conn))
+                {
+                    cmd.CommandText = "INSERT INTO Style(name, position, isActive) VALUES (@Name, @Position, @IsActive)";
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@Name", o.getName());
+                    cmd.Parameters.AddWithValue("@Position", o.getPosition());
+                    cmd.Parameters.AddWithValue("@IsActive", o.getIsActive());
+                    try
+                    {
+                        success = cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException e)
+                    {
+                        System.Console.WriteLine(e);
+
+                    }
+                }
+                conn.Close();
+            }
+            if (success != -1)
+            {
+                return o;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
