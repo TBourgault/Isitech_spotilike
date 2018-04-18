@@ -16,6 +16,8 @@ namespace SpotilikeClient
         {
             InitializeComponent();
             generateHeader();
+            generatePlayer_layout();
+
             //Button play1 = new Button();
             //this.dataGridView1.Rows.Add("a", "b");
         }
@@ -66,6 +68,8 @@ namespace SpotilikeClient
             title.Text = "Lecture";
 
             Button play = new Button();
+            play.Text = ">";
+            this.play_panel.Controls.Add(play);
         }
     }
 }

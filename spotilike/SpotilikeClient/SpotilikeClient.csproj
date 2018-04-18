@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\StyleDAO.cs" />
+    <Compile Include="Form_style\ButtonStart.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artiste.cs" />
     <Compile Include="DAO\IDAO.cs" />
