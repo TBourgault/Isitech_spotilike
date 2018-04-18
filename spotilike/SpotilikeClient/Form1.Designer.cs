@@ -81,7 +81,7 @@
             this.artisteToolStripMenuItem,
             this.styleToolStripMenuItem});
             this.trierParToolStripMenuItem.Name = "trierParToolStripMenuItem";
-            this.trierParToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.trierParToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.trierParToolStripMenuItem.Text = "Trier par ...";
             // 
             // musiqueToolStripMenuItem
@@ -105,7 +105,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // configurationToolStripMenuItem
@@ -120,7 +120,7 @@
             // couleursToolStripMenuItem
             // 
             this.couleursToolStripMenuItem.Name = "couleursToolStripMenuItem";
-            this.couleursToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.couleursToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.couleursToolStripMenuItem.Text = "Couleurs";
             // 
             // ajouterToolStripMenuItem
@@ -130,7 +130,7 @@
             this.artisteToolStripMenuItem1,
             this.genreToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.ajouterToolStripMenuItem.Text = "Ajouter ...";
             // 
             // musiqueToolStripMenuItem1

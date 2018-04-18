@@ -13,6 +13,7 @@ namespace SpotilikeClient.Models
         private DateTime date;
         private Artiste artiste;
         private Style style;
+        private Album album;
         
 
         // CONSTRUCT
@@ -30,13 +31,14 @@ namespace SpotilikeClient.Models
             this.date = date;
         }
 
-        public Musique(string title, string details, DateTime date, Artiste artiste, Style style)
+        public Musique(string title, string details, DateTime date, Artiste artiste, Style style, Album album)
         {
             this.title = title;
             this.details = details;
             this.date = date;
             this.artiste = artiste;
             this.style = style;
+            this.album = album;
         }
 
 
@@ -90,6 +92,16 @@ namespace SpotilikeClient.Models
         public void setStyle(Style style)
         {
             this.style = style;
+        }
+
+        public Album getAlbum()
+        {
+            return this.album;
+        }
+
+        public void setAlbum(Album album)
+        {
+            this.album = album;
         }
 
         public string __toString()

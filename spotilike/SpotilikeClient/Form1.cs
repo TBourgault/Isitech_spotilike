@@ -15,7 +15,7 @@ namespace SpotilikeClient
         public Form1()
         {
             InitializeComponent();
+            //this.dataGridView1.Rows.Add("a", "b");
         }
-       
     }
 }
