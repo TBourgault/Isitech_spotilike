@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,6 +71,11 @@ namespace SpotilikeClient
             Button play = new Button();
             play.Text = ">";
             this.play_panel.Controls.Add(play);
+            this.play_panel.Controls.Add(BTNNext);
+            this.play_panel.Controls.Add(BTNPause);
+            this.play_panel.Controls.Add(BTNStop);
+            this.play_panel.Controls.Add(BTNPlay);
+            this.play_panel.Controls.Add(BTNBack);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +84,27 @@ namespace SpotilikeClient
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNPlay_Click(object sender, EventArgs e)
+        {
+            SoundPlayer simpleSound = new SoundPlayer("c:\\Desktop\\Isitech_spotilike\\spotilike\\SpotilikeClient\\LikeIDo.mp3");
+            simpleSound.Play();
+        }
+
+        private void BTNStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNNext_Click(object sender, EventArgs e)
         {
 
         }
