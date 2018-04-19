@@ -25,9 +25,6 @@ namespace SpotilikeClient
             //Button play1 = new Button();
             //this.dataGridView1.Rows.Add("a", "b");
 
-            
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
