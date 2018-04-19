@@ -46,11 +46,10 @@
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.list_panel = new System.Windows.Forms.Panel();
             this.play_panel = new System.Windows.Forms.Panel();
-            this.BTNPause = new System.Windows.Forms.Button();
-            this.BTNBack = new System.Windows.Forms.Button();
-            this.BTNNext = new System.Windows.Forms.Button();
             this.BTNPlay = new System.Windows.Forms.Button();
             this.BTNStop = new System.Windows.Forms.Button();
+            this.BTNBack = new System.Windows.Forms.Button();
+            this.BTNNext = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.play_panel.SuspendLayout();
             this.SuspendLayout();
@@ -172,41 +171,10 @@
             this.play_panel.Controls.Add(this.BTNStop);
             this.play_panel.Controls.Add(this.BTNBack);
             this.play_panel.Controls.Add(this.BTNNext);
-            this.play_panel.Controls.Add(this.BTNPause);
             this.play_panel.Location = new System.Drawing.Point(733, 31);
             this.play_panel.Name = "play_panel";
             this.play_panel.Size = new System.Drawing.Size(237, 429);
             this.play_panel.TabIndex = 3;
-            // 
-            // BTNPause
-            // 
-            this.BTNPause.Image = ((System.Drawing.Image)(resources.GetObject("BTNPause.Image")));
-            this.BTNPause.Location = new System.Drawing.Point(88, 369);
-            this.BTNPause.Name = "BTNPause";
-            this.BTNPause.Size = new System.Drawing.Size(54, 55);
-            this.BTNPause.TabIndex = 0;
-            this.BTNPause.UseVisualStyleBackColor = true;
-            this.BTNPause.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BTNBack
-            // 
-            this.BTNBack.Image = ((System.Drawing.Image)(resources.GetObject("BTNBack.Image")));
-            this.BTNBack.Location = new System.Drawing.Point(23, 369);
-            this.BTNBack.Name = "BTNBack";
-            this.BTNBack.Size = new System.Drawing.Size(59, 55);
-            this.BTNBack.TabIndex = 1;
-            this.BTNBack.UseVisualStyleBackColor = true;
-            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
-            // 
-            // BTNNext
-            // 
-            this.BTNNext.Image = ((System.Drawing.Image)(resources.GetObject("BTNNext.Image")));
-            this.BTNNext.Location = new System.Drawing.Point(148, 369);
-            this.BTNNext.Name = "BTNNext";
-            this.BTNNext.Size = new System.Drawing.Size(57, 56);
-            this.BTNNext.TabIndex = 2;
-            this.BTNNext.UseVisualStyleBackColor = true;
-            this.BTNNext.Click += new System.EventHandler(this.BTNNext_Click);
             // 
             // BTNPlay
             // 
@@ -227,6 +195,26 @@
             this.BTNStop.TabIndex = 4;
             this.BTNStop.UseVisualStyleBackColor = true;
             this.BTNStop.Click += new System.EventHandler(this.BTNStop_Click);
+            // 
+            // BTNBack
+            // 
+            this.BTNBack.Image = ((System.Drawing.Image)(resources.GetObject("BTNBack.Image")));
+            this.BTNBack.Location = new System.Drawing.Point(23, 369);
+            this.BTNBack.Name = "BTNBack";
+            this.BTNBack.Size = new System.Drawing.Size(59, 55);
+            this.BTNBack.TabIndex = 1;
+            this.BTNBack.UseVisualStyleBackColor = true;
+            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
+            // 
+            // BTNNext
+            // 
+            this.BTNNext.Image = ((System.Drawing.Image)(resources.GetObject("BTNNext.Image")));
+            this.BTNNext.Location = new System.Drawing.Point(148, 369);
+            this.BTNNext.Name = "BTNNext";
+            this.BTNNext.Size = new System.Drawing.Size(57, 56);
+            this.BTNNext.TabIndex = 2;
+            this.BTNNext.UseVisualStyleBackColor = true;
+            this.BTNNext.Click += new System.EventHandler(this.BTNNext_Click);
             // 
             // Form1
             // 
@@ -276,7 +264,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel list_panel;
         private System.Windows.Forms.Panel play_panel;
-        private System.Windows.Forms.Button BTNPause;
         private System.Windows.Forms.Button BTNStop;
         private System.Windows.Forms.Button BTNPlay;
         private System.Windows.Forms.Button BTNNext;

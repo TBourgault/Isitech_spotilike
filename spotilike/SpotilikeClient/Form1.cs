@@ -13,6 +13,9 @@ namespace SpotilikeClient
 {
     public partial class Form1 : Form
     {
+        private SoundPlayer simpleSound = new SoundPlayer();
+        private string[] musics = new string[] { @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\VALDMDR.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\Fusil.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\DuaLupa.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\BattleRoyal.wav"};
+
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +24,10 @@ namespace SpotilikeClient
 
             //Button play1 = new Button();
             //this.dataGridView1.Rows.Add("a", "b");
+
+            
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,7 +79,6 @@ namespace SpotilikeClient
             play.Text = ">";
             this.play_panel.Controls.Add(play);
             this.play_panel.Controls.Add(BTNNext);
-            this.play_panel.Controls.Add(BTNPause);
             this.play_panel.Controls.Add(BTNStop);
             this.play_panel.Controls.Add(BTNPlay);
             this.play_panel.Controls.Add(BTNBack);
@@ -80,7 +86,7 @@ namespace SpotilikeClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(this.simpleSound.Tag.ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -90,8 +96,8 @@ namespace SpotilikeClient
 
         private void BTNPlay_Click(object sender, EventArgs e)
         {
-                       SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
-                       simpleSound.Play();
+                      // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
+                       this.simpleSound.Play();
 
             //SoundPlayer player = new SoundPlayer("C:\\bass.wav");
 
@@ -99,7 +105,7 @@ namespace SpotilikeClient
 
         private void BTNStop_Click(object sender, EventArgs e)
         {
-
+            this.simpleSound.Stop();
         }
 
         private void BTNBack_Click(object sender, EventArgs e)
