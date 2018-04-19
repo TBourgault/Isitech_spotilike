@@ -8,22 +8,45 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpotilikeClient
 {
     public partial class Form1 : Form
     {
         private SoundPlayer simpleSound = new SoundPlayer();
-        private string[] musics = new string[] { @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\VALDMDR.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\Fusil.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\DuaLupa.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\BattleRoyal.wav"};
+        private string[] musics = new string[2];
+        //C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\VALDMDR.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\Fusil.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\DuaLupa.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\
+
+        string path = Application.ExecutablePath;
 
         public Form1()
         {
             InitializeComponent();
             generateHeader();
             generatePlayer_layout();
+            
+
+            path = Directory.GetParent(path).ToString();
+            System.Console.WriteLine(path);
+            path = Directory.GetParent(path).ToString();
+            System.Console.WriteLine(path);
+            path = Directory.GetParent(path).ToString();
+            System.Console.WriteLine(path);
+            path = path + "\\Resources\\";
+            System.Console.WriteLine(path);
+
+            musics[0] = path + "BattleRoyal.wav";
+            musics[1] = path + "VALDMDR.wav";
+
+            System.Console.WriteLine(musics[0]);
+
 
             //Button play1 = new Button();
             //this.dataGridView1.Rows.Add("a", "b");
+
+
+
 
         }
 
@@ -93,8 +116,10 @@ namespace SpotilikeClient
 
         private void BTNPlay_Click(object sender, EventArgs e)
         {
-                      // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
-                       this.simpleSound.Play();
+            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
+            // Générer un random int de la taille du tableau
+            this.simpleSound.SoundLocation = musics[0];
+            this.simpleSound.Play();
 
             //SoundPlayer player = new SoundPlayer("C:\\bass.wav");
 

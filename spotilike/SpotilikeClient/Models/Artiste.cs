@@ -93,7 +93,7 @@ namespace SpotilikeClient.Models
             return this.isGroup;
         }
 
-        public void setIsGroup()
+        public void setIsGroup(bool isGroup)
         {
             this.isGroup = isGroup;
         }
