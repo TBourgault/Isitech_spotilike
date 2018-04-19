@@ -90,8 +90,11 @@ namespace SpotilikeClient
 
         private void BTNPlay_Click(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer("c:\\Desktop\\Isitech_spotilike\\spotilike\\SpotilikeClient\\LikeIDo.mp3");
-            simpleSound.Play();
+                       SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
+                       simpleSound.Play();
+
+            //SoundPlayer player = new SoundPlayer("C:\\bass.wav");
+
         }
 
         private void BTNStop_Click(object sender, EventArgs e)
