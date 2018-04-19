@@ -8,6 +8,7 @@ namespace SpotilikeClient.Models
 {
     class Musique
     {
+        private int id;
         private string title;
         private string details;
         private DateTime date;
@@ -47,6 +48,15 @@ namespace SpotilikeClient.Models
 
 
         // SETTERS AND GETTERS
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
 
         public string getTitle()
         {

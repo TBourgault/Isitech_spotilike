@@ -14,6 +14,7 @@ namespace SpotilikeClient.Models
         private Artiste artiste;
         private Style style;
         private List<Musique> musiques;
+        private int id;
 
         // CONSTRUCTEUR
         public Album()
@@ -46,6 +47,16 @@ namespace SpotilikeClient.Models
         }
 
         // GETTERS & SETTERS
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
         public string getTitle()
         {
             return this.title;
