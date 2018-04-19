@@ -79,7 +79,7 @@ namespace SpotilikeClient.Models
             return this.artiste;
         }
 
-        public void setArtiste(Artiste artistre)
+        public void setArtiste(Artiste artiste)
         {
             this.artiste = artiste;
         }
