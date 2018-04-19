@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\StyleDAO.cs" />
+    <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artiste.cs" />
     <Compile Include="DAO\IDAO.cs" />
     <Compile Include="Form1.cs">
