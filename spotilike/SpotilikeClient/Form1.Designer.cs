@@ -58,7 +58,7 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(67, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // menuStrip1
             // 
@@ -178,12 +178,13 @@
             // 
             // BTNPlay
             // 
+            this.BTNPlay.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BTNPlay.Image = ((System.Drawing.Image)(resources.GetObject("BTNPlay.Image")));
             this.BTNPlay.Location = new System.Drawing.Point(23, 310);
             this.BTNPlay.Name = "BTNPlay";
             this.BTNPlay.Size = new System.Drawing.Size(59, 53);
             this.BTNPlay.TabIndex = 3;
-            this.BTNPlay.UseVisualStyleBackColor = true;
+            this.BTNPlay.UseVisualStyleBackColor = false;
             this.BTNPlay.Click += new System.EventHandler(this.BTNPlay_Click);
             // 
             // BTNStop
@@ -220,6 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(982, 570);
             this.Controls.Add(this.play_panel);
             this.Controls.Add(this.list_panel);

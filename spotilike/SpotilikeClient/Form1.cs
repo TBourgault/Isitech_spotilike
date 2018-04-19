@@ -16,6 +16,7 @@ namespace SpotilikeClient
     {
         private SoundPlayer simpleSound = new SoundPlayer();
         private string[] musics = new string[5];
+        private int key_music_played = 0;
         //C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\VALDMDR.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\Fusil.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\DuaLupa.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\
 
         string path = Application.ExecutablePath;
@@ -93,10 +94,6 @@ namespace SpotilikeClient
         {
             Label title = new Label();
             title.Text = "Lecture";
-
-            Button play = new Button();
-            play.Text = ">";
-            this.play_panel.Controls.Add(play);
             this.play_panel.Controls.Add(BTNNext);
             this.play_panel.Controls.Add(BTNStop);
             this.play_panel.Controls.Add(BTNPlay);
@@ -117,7 +114,8 @@ namespace SpotilikeClient
         {
             // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\LikeIDo.wav");
             // Générer un random int de la taille du tableau
-            this.simpleSound.SoundLocation = musics[generateRandom()];
+            this.key_music_played = generateRandom();
+            this.simpleSound.SoundLocation = musics[key_music_played];
             this.simpleSound.Play();
 
             //SoundPlayer player = new SoundPlayer("C:\\bass.wav");
@@ -131,11 +129,16 @@ namespace SpotilikeClient
 
         private void BTNBack_Click(object sender, EventArgs e)
         {
-
+            this.key_music_played = ((this.key_music_played - 1) < 0) ? (this.key_music_played + this.musics.Length) - 1 : this.key_music_played-1;
+            this.simpleSound.SoundLocation = musics[this.key_music_played];
+            this.simpleSound.Play();
         }
 
         private void BTNNext_Click(object sender, EventArgs e)
         {
+            this.key_music_played = ((this.key_music_played + 1) > this.musics.Length - 1) ? (this.key_music_played - this.musics.Length) + 1 : this.key_music_played + 1;
+            this.simpleSound.SoundLocation = musics[this.key_music_played];
+            this.simpleSound.Play();
 
         }
 
