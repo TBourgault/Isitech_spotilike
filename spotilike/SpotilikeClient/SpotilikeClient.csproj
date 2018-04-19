@@ -64,7 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AlbumDAO.cs" />
     <Compile Include="DAO\ArtisteDAO.cs" />
+    <Compile Include="DAO\MusiqueDAO.cs" />
     <Compile Include="DAO\StyleDAO.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artiste.cs" />

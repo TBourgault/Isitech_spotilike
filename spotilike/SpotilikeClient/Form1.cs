@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+using SpotilikeClient.DAO;
+using SpotilikeClient.Models;
+
 namespace SpotilikeClient
 {
     public partial class Form1 : Form
@@ -20,19 +23,28 @@ namespace SpotilikeClient
         //C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\VALDMDR.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\Fusil.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\Resources\DuaLupa.wav", @"C:\Users\abt\Desktop\Isitech_spotilike\spotilike\SpotilikeClient\
 
         string path = Application.ExecutablePath;
+        private MusiqueDAO musiqueDAO = new MusiqueDAO();
+        private AlbumDAO albumDAO = new AlbumDAO();
+        private ArtisteDAO artisteDAO = new ArtisteDAO();
+        private StyleDAO styleDAO = new StyleDAO();
+        private List<Musique> titres = new List<Musique>();
 
         public Form1()
         {
             InitializeComponent();
             generateHeader();
             generatePlayer_layout();
-            
+            this.titres = musiqueDAO.findAll();
 
+            // générer les paths
             path = Directory.GetParent(path).ToString();
             path = Directory.GetParent(path).ToString();
             path = Directory.GetParent(path).ToString();
             path = path + "\\Resources\\";
 
+
+           // titres = musiqueDAO.findAll();
+            generateLine();
             musics[0] = path + "BattleRoyal.wav";
             musics[1] = path + "VALDMDR.wav";
             musics[2] = path + "LikeIDo.wav";
@@ -49,10 +61,14 @@ namespace SpotilikeClient
 
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void generateLine()
         {
-
+            foreach ( Musique m in titres )
+            {
+                
+                this.list_panel.Controls.Add(new Label() { Text = m.getDetails(), Location = new Point(300,300) });
+            }
         }
 
         private void generateHeader()
@@ -103,11 +119,6 @@ namespace SpotilikeClient
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this.simpleSound.Tag.ToString());
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BTNPlay_Click(object sender, EventArgs e)

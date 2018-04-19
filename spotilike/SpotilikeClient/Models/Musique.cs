@@ -13,7 +13,6 @@ namespace SpotilikeClient.Models
         private string details;
         private DateTime date;
         private Artiste artiste;
-        private Style style;
         private Album album;
         public string path;
         
@@ -35,13 +34,12 @@ namespace SpotilikeClient.Models
             this.path = "";
         }
 
-        public Musique(string title, string details, DateTime date, Artiste artiste, Style style, Album album, string path)
+        public Musique(string title, string details, DateTime date, Artiste artiste, Album album, string path)
         {
             this.title = title;
             this.details = details;
             this.date = date;
             this.artiste = artiste;
-            this.style = style;
             this.album = album;
             this.path = path;
         }
@@ -96,16 +94,6 @@ namespace SpotilikeClient.Models
         public void setArtiste(Artiste artiste)
         {
             this.artiste = artiste;
-        }
-
-        public Style getStyle()
-        {
-            return this.style;
-        }
-
-        public void setStyle(Style style)
-        {
-            this.style = style;
         }
 
         public Album getAlbum()
