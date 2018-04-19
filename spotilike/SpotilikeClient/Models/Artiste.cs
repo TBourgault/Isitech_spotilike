@@ -8,6 +8,7 @@ namespace SpotilikeClient.Models
 {
     class Artiste
     {
+        private int id;
         private string firstName;
         private string lastName;
         private string gender;
@@ -58,6 +59,16 @@ namespace SpotilikeClient.Models
         }
 
         // GETTERS & SETTERS
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
         public string getFirstName()
         {
             return this.firstName;
