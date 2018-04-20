@@ -9,5 +9,7 @@ namespace SpotilikeClient.DAO
     interface IDAO<T>
     {
         List<T> findAll();
+
+        T findById(int id);
     }
 }

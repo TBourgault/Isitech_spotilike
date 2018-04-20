@@ -46,6 +46,7 @@
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.list_panel = new System.Windows.Forms.Panel();
             this.play_panel = new System.Windows.Forms.Panel();
+            this.lab_titre = new System.Windows.Forms.Label();
             this.BTNPlay = new System.Windows.Forms.Button();
             this.BTNStop = new System.Windows.Forms.Button();
             this.BTNBack = new System.Windows.Forms.Button();
@@ -68,7 +69,7 @@
             this.configurationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(513, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -162,25 +163,35 @@
             // 
             this.list_panel.Location = new System.Drawing.Point(12, 31);
             this.list_panel.Name = "list_panel";
-            this.list_panel.Size = new System.Drawing.Size(715, 429);
+            this.list_panel.Size = new System.Drawing.Size(488, 298);
             this.list_panel.TabIndex = 2;
             // 
             // play_panel
             // 
+            this.play_panel.Controls.Add(this.lab_titre);
             this.play_panel.Controls.Add(this.BTNPlay);
             this.play_panel.Controls.Add(this.BTNStop);
             this.play_panel.Controls.Add(this.BTNBack);
             this.play_panel.Controls.Add(this.BTNNext);
-            this.play_panel.Location = new System.Drawing.Point(733, 31);
+            this.play_panel.Location = new System.Drawing.Point(12, 335);
             this.play_panel.Name = "play_panel";
-            this.play_panel.Size = new System.Drawing.Size(237, 429);
+            this.play_panel.Size = new System.Drawing.Size(488, 120);
             this.play_panel.TabIndex = 3;
+            // 
+            // lab_titre
+            // 
+            this.lab_titre.AutoSize = true;
+            this.lab_titre.Location = new System.Drawing.Point(3, 35);
+            this.lab_titre.Name = "lab_titre";
+            this.lab_titre.Size = new System.Drawing.Size(202, 17);
+            this.lab_titre.TabIndex = 5;
+            this.lab_titre.Text = "Aucun titre en cours de lecture";
             // 
             // BTNPlay
             // 
             this.BTNPlay.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BTNPlay.Image = ((System.Drawing.Image)(resources.GetObject("BTNPlay.Image")));
-            this.BTNPlay.Location = new System.Drawing.Point(23, 310);
+            this.BTNPlay.Location = new System.Drawing.Point(71, 58);
             this.BTNPlay.Name = "BTNPlay";
             this.BTNPlay.Size = new System.Drawing.Size(59, 53);
             this.BTNPlay.TabIndex = 3;
@@ -190,7 +201,7 @@
             // BTNStop
             // 
             this.BTNStop.Image = ((System.Drawing.Image)(resources.GetObject("BTNStop.Image")));
-            this.BTNStop.Location = new System.Drawing.Point(148, 310);
+            this.BTNStop.Location = new System.Drawing.Point(136, 58);
             this.BTNStop.Name = "BTNStop";
             this.BTNStop.Size = new System.Drawing.Size(57, 53);
             this.BTNStop.TabIndex = 4;
@@ -200,7 +211,7 @@
             // BTNBack
             // 
             this.BTNBack.Image = ((System.Drawing.Image)(resources.GetObject("BTNBack.Image")));
-            this.BTNBack.Location = new System.Drawing.Point(23, 369);
+            this.BTNBack.Location = new System.Drawing.Point(6, 56);
             this.BTNBack.Name = "BTNBack";
             this.BTNBack.Size = new System.Drawing.Size(59, 55);
             this.BTNBack.TabIndex = 1;
@@ -210,7 +221,7 @@
             // BTNNext
             // 
             this.BTNNext.Image = ((System.Drawing.Image)(resources.GetObject("BTNNext.Image")));
-            this.BTNNext.Location = new System.Drawing.Point(148, 369);
+            this.BTNNext.Location = new System.Drawing.Point(199, 55);
             this.BTNNext.Name = "BTNNext";
             this.BTNNext.Size = new System.Drawing.Size(57, 56);
             this.BTNNext.TabIndex = 2;
@@ -222,7 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(982, 570);
+            this.ClientSize = new System.Drawing.Size(513, 460);
             this.Controls.Add(this.play_panel);
             this.Controls.Add(this.list_panel);
             this.Controls.Add(this.menuStrip1);
@@ -232,6 +243,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.play_panel.ResumeLayout(false);
+            this.play_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Button BTNPlay;
         private System.Windows.Forms.Button BTNNext;
         private System.Windows.Forms.Button BTNBack;
+        private System.Windows.Forms.Label lab_titre;
     }
 }
 

@@ -48,5 +48,42 @@ namespace SpotilikeClient.DAO
 
             return albums;
         }
+
+        public Album findById(int id)
+        {
+            Album album = new Album();
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Album WHERE id = " + id;
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Album a = new Album();
+                                a.setId(int.Parse(reader["id"].ToString()));
+                                a.setTitle(reader["title"].ToString());
+                                a.setDuration(int.Parse(reader["duration"].ToString()));
+                                a.setPublishedAt(DateTime.Parse(reader["publishedAt"].ToString()));
+
+                                album = a;
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SQLiteException e)
+            {
+                e.GetBaseException();
+            }
+
+            return album;
+        }
     }
 }

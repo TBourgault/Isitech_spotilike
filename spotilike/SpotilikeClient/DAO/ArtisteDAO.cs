@@ -52,5 +52,53 @@ namespace SpotilikeClient.DAO
 
             return artistes;
         }
+
+        public Artiste findById(int id)
+        {
+            Artiste artiste = new Artiste();
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Artiste WHERE id = " + id;
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Artiste a = new Artiste();
+                                a.setId(int.Parse(reader["id"].ToString()));
+                                a.setFirstName(reader["first_name"].ToString());
+                                a.setLastName(reader["last_name"].ToString());
+                                bool isGroup = false;
+                                if(reader["isGroup"].ToString().Equals("0"))
+                                {
+                                    isGroup = false;
+                                } else
+                                {
+                                    isGroup = true;
+                                }
+                                a.setIsGroup(isGroup);
+                                a.setCountry(reader["country"].ToString());
+                                a.setCreatedAt(DateTime.Parse(reader["created_at"].ToString()));
+                                a.setGender(reader["gender"].ToString());
+
+                                artiste = a;
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SQLiteException e)
+            {
+                e.GetBaseException();
+            }
+
+            return artiste;
+        }
     }
 }

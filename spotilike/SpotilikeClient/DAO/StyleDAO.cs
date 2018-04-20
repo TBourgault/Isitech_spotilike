@@ -50,5 +50,9 @@ namespace SpotilikeClient.DAO
             return styles;
         }
 
+        public Style findById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

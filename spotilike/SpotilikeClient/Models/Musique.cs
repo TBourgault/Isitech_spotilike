@@ -116,10 +116,10 @@ namespace SpotilikeClient.Models
             this.path = path;
         }
 
-        public string __toString()
+        public override string ToString()
         {
             // TODO
-            return "TODO";
+            return this.id + " " + this.title;
         }
     }
 }
